@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="b109cf6b-1d0d-4d42-b24a-3aacffe95e87">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="29"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select*from tb_datapegawai]]>
+	</queryString>
+	<field name="id_pegawai" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NIP" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jabatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" uuid="0a27a300-a589-4bb4-be06-bc04e422530f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[DATA PEGAWAI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="232" y="67" width="568" height="37" uuid="ce235053-10a7-4233-bbd2-1beea6db7a19"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[HERMAWAN GRUP]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="97" y="5" width="705" height="20" backcolor="#666666" uuid="a7280fa0-c47e-47fc-a06e-7d4200d4e2c1"/>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="34" height="15" uuid="bb3180b7-0b52-4790-bb10-6f7783c7f354"/>
+					<text><![CDATA[NO.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="35" y="0" width="100" height="15" uuid="f0e1670e-04da-4d6c-80ac-b31844c5e517"/>
+					<text><![CDATA[NIP]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="135" y="0" width="131" height="15" uuid="00834631-8e98-4b0f-8b4d-084212e26e74"/>
+					<text><![CDATA[NAMA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="266" y="0" width="100" height="15" uuid="2cceba72-5ff3-43c8-bce7-f691c6954539"/>
+					<text><![CDATA[ALAMAT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="384" y="0" width="100" height="15" uuid="b62fe0c7-abe8-4941-8bd3-0d837aca8ca2"/>
+					<text><![CDATA[JENIS KELAMIN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="500" y="0" width="100" height="15" uuid="1d442c7c-81b9-4713-a09f-f38b114f23d6"/>
+					<text><![CDATA[JABATAN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="600" y="0" width="100" height="15" uuid="878face2-2215-4c9d-b90a-63d35d18ca6e"/>
+					<text><![CDATA[NO HP]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="97" y="1" width="705" height="15" uuid="edd0d9ef-4d59-43cf-bd77-fdaf62f32200"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="34" height="15" uuid="0792c759-799d-4d7a-b7d6-1b806154a11d"/>
+					<textFieldExpression><![CDATA[$F{id_pegawai}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="35" y="0" width="100" height="15" uuid="82424d3f-93fc-45fe-9993-b48ae1bcdb0a"/>
+					<textFieldExpression><![CDATA[$F{NIP}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="135" y="0" width="131" height="15" uuid="77ed3102-3a76-44d1-9f79-37757b7f4b4b"/>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="266" y="0" width="100" height="15" uuid="b8721e34-b1e7-429a-9a3d-c635278fb25d"/>
+					<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="384" y="0" width="100" height="15" uuid="fa22f588-588c-448b-8121-121fde528b2d"/>
+					<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="500" y="0" width="100" height="15" uuid="c68688f7-886f-47a5-878d-d2bb1eb152d9"/>
+					<textFieldExpression><![CDATA[$F{jabatan}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="600" y="0" width="100" height="15" uuid="3f5c6236-763c-4338-bd84-784dce85594d"/>
+					<textFieldExpression><![CDATA[$F{no_hp}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="705" height="1" uuid="3a5f5962-3512-47a5-a4f9-c5da04a12d60"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="3ea96308-1c15-4bad-95f0-88940698b178"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="96" y="0" width="267" height="20" uuid="33c74fbf-f795-42e6-bfc1-3b9eecd71140"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[DATA PEGAWAI Report]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

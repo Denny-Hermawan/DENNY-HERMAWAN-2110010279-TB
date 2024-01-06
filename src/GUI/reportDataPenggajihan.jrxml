@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="f20c3022-d8a9-46cd-85d8-20c4b06c19e3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select*from tb_penggajihan]]>
+	</queryString>
+	<field name="id_penggajihan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_pegawai" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hari_kerja" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gajih_pokok" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tunjangan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_gajih" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" uuid="8718e1b4-8627-4611-86a2-9f28d1165127"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[DATA PENGGAJIHAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="232" y="67" width="568" height="37" uuid="021399da-f8c6-40c5-b807-9b66adeefb17"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[HERMAWAN GRUP]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="97" y="5" width="705" height="20" backcolor="#666666" uuid="83a3dcfc-4eb7-422b-b4ea-0f3cd83e6c0f"/>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="44" height="15" uuid="94fae0c7-b3c8-418a-9479-4020ca31242c"/>
+					<text><![CDATA[NO.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="44" y="0" width="91" height="15" uuid="b2b020f4-cb0e-496e-985c-11df74e9cf17"/>
+					<text><![CDATA[NO PEGAWAI]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="143" y="0" width="146" height="15" uuid="94b09bf2-8481-4b12-b6d2-6b545ad5b729"/>
+					<text><![CDATA[NAMA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="297" y="0" width="90" height="15" uuid="8beb634a-c1c4-4b0b-a13f-e3c16193316c"/>
+					<text><![CDATA[HARI KERJA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="390" y="0" width="100" height="15" uuid="90f968f8-5120-48a9-8e6d-1e6276f08845"/>
+					<text><![CDATA[GAJIH POKOK]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="500" y="0" width="100" height="15" uuid="327f82fe-00b7-416d-93b7-7235e571b329"/>
+					<text><![CDATA[TUNJANGAN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="600" y="0" width="100" height="15" uuid="58ecdb0c-d197-4fde-a7e2-24148355b63c"/>
+					<text><![CDATA[TOTAL GAJIH]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="97" y="1" width="705" height="15" uuid="9408330c-252c-4220-abcb-8b918977d5ef"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="44" height="15" uuid="a47125f0-60d0-46ba-bc3f-27a129faefb3"/>
+					<textFieldExpression><![CDATA[$F{id_penggajihan}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="143" y="0" width="146" height="15" uuid="cadc4673-def0-4491-a8e8-a2db7b3ef08a"/>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="297" y="0" width="90" height="15" uuid="592fc09b-8fbc-4cfc-b91a-da94a3f78e61"/>
+					<textFieldExpression><![CDATA[$F{hari_kerja}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="500" y="0" width="100" height="15" uuid="7c2002f7-03bf-493a-97a8-439546d10bcf"/>
+					<textFieldExpression><![CDATA[$F{tunjangan}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="600" y="0" width="100" height="15" uuid="12880f6e-a96c-44a6-aa79-02300fd7e4da"/>
+					<textFieldExpression><![CDATA[$F{total_gajih}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="705" height="1" uuid="62111ea5-b5ce-4599-bd45-17dd7b1cb4a3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="141" y="2" width="91" height="15" uuid="a9e30078-9307-48e2-b14f-aa8131fd24f4"/>
+				<textFieldExpression><![CDATA[$F{id_pegawai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="487" y="0" width="100" height="15" uuid="832b9dcb-597d-47a2-9b67-27d36fb710d4"/>
+				<textFieldExpression><![CDATA[$F{gajih_pokok}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="88a05c39-7b6a-42ab-bc93-fa2479935667"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="96" y="0" width="267" height="20" uuid="286c546b-7b67-4e04-8186-c7704e139c6e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[DATA PENGGAJIHAN Report]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
